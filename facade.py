@@ -9,8 +9,19 @@ class Computer:
         self.cpu=parts.CPU()
         self.mem=parts.Memory()
         self.hd=parts.HardDisk()
-    # implement the class below this line    
+    # implement the class below this line
+    def startComputer(self):
+        self.cpu.check()
+        self.mem.load()
+        self.hd.mount()
+    def printCPUInfo(self):
+        self.cpu.getInfo()
+    def printMemInfo(self):
+        self.mem.getInfo()
+    def printHDInfo(self):
+        self.hd.getInfo()
 
+# I can't actually run this code because my python is version 3.3, so the print statements are wrong for it.
 
 
 
